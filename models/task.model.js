@@ -4,7 +4,7 @@ const taskShema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: [true, "please enter a name of your task"],
     },
 
     completed: {
