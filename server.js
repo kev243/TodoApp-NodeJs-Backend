@@ -21,6 +21,9 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
+app.get("/", (req, res) => {
+  res.json("hello heroku");
+});
 //nos routes
 app.use("/api/v1", require("./routes/task.routes"));
 
