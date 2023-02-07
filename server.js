@@ -16,14 +16,15 @@ app.use(express.urlencoded({ extended: false }));
 //autorisation cors
 app.use(
   cors({
-    origin: "https://main.d2wm82z7eycdse.amplifyapp.com/",
+    origin: [
+      "http://localhost:3000",
+      "https://main.d2wm82z7eycdse.amplifyapp.com/",
+    ],
     credentials: true,
     optionsSuccessStatus: 200,
   })
 );
-app.get("/", (req, res) => {
-  res.json("hello heroku");
-});
+
 //nos routes
 app.use("/api/v1", require("./routes/task.routes"));
 
