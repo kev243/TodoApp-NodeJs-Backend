@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 //autorisation cors
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://main.d2wm82z7eycdse.amplifyapp.com/",
     credentials: true,
     optionsSuccessStatus: 200,
   })
